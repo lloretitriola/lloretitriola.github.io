@@ -40,8 +40,8 @@ main {
 
 /* ─── Profile image ──────────────────────────── */
 .profile-img {
-  width: var(--img-size);
-  height: var(--img-size);
+  width: 540px;
+  height: auto;
   border-radius: var(--radius);
   object-fit: cover;
   /* subtle grain border */
