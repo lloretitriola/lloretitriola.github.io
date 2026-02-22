@@ -1,12 +1,10 @@
 /* ─── Variables ─────────────────────────────── */
 :root {
   --bg:        #f8f7f4;
-  --text:      #1a1a18;
-  --muted:     #6b6b67;
-  --accent:    #1a1a18;
-  --link:      #4a4a46;
-  --radius:    50%;
-  --img-size:  96px;
+  --text:      #000000;
+  --muted:     #000000;
+  --accent:    #000000;
+  --link:      #000000;
 }
 
 /* ─── Reset ─────────────────────────────────── */
@@ -18,8 +16,7 @@ html { font-size: 14px; }
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'DM Mono', monospace;
-  font-weight: 300;
+  font-family: 'Times New Roman', Times, serif;
   min-height: 100dvh;
   display: flex;
   align-items: center;
@@ -35,28 +32,19 @@ main {
   gap: 1.1rem;
   text-align: center;
   max-width: 360px;
-  animation: fadeUp .7s ease both;
 }
 
 /* ─── Profile image ──────────────────────────── */
 .profile-img {
-  width: 540px;
+  width: 280px;
   height: auto;
-  border-radius: var(--radius);
-  object-fit: cover;
-  /* subtle grain border */
-  box-shadow: 0 0 0 1px rgba(0,0,0,.08), 0 2px 12px rgba(0,0,0,.07);
-  filter: grayscale(8%);
-  transition: filter .3s ease;
 }
-.profile-img:hover { filter: grayscale(0%); }
 
 /* ─── Name ───────────────────────────────────── */
 h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: 1.55rem;
-  letter-spacing: .04em;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+  font-size: 1.2rem;
   color: var(--text);
 }
 
@@ -64,63 +52,24 @@ h1 {
 .bio {
   font-size: .78rem;
   line-height: 1.75;
-  color: var(--muted);
-  letter-spacing: .02em;
+  color: var(--text);
 }
 
 /* ─── Bio link ───────────────────────────────── */
 .bio a {
-  color: var(--link);
+  color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,.15);
+  border-bottom: 1px solid #000;
   padding-bottom: 1px;
-  transition: border-color .2s ease, color .2s ease;
 }
 .bio a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-/* ─── Links ──────────────────────────────────── */
-.links {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  font-size: .72rem;
-  letter-spacing: .06em;
-  margin-top: .3rem;
-}
-
-.links a {
-  color: var(--link);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 1px;
-  transition: border-color .2s ease, color .2s ease;
-}
-.links a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-.sep { color: var(--muted); user-select: none; }
-
-/* ─── Animation ──────────────────────────────── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
+  opacity: .6;
 }
 
 /* ─── Dark mode (auto) ───────────────────────── */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:    #111110;
-    --text:  #e8e6e0;
-    --muted: #888880;
-    --accent:#e8e6e0;
-    --link:  #b0ada5;
-  }
-  .profile-img {
-    box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 2px 12px rgba(0,0,0,.4);
+    --bg: #111110;
+    --text: #ffffff;
   }
 }
